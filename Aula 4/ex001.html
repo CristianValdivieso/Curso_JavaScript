@@ -5,25 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primer programa...</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
         body{
             background-color: rgb(83, 83, 196);
             color: white;
             font:normal 20pt Arial;
         }
-        h1 {
+        h1{
             color: rgb(238, 238, 52);
+        }
+        header{
+            box-shadow: 1px 1px 10px rgb(255, 255, 255);
+            text-align: center;
+            width: 50%;
+            margin-left: 330px;
+        }
+        h1{
+            color:rgb(0, 183, 255);
+            font-family: 'Notable', sans-serif;
+            font-size: 50pt;
+            text-shadow: 1px 2px black;
+        }
+        h2{
+            font-size: 22pt;
+        }
+        div#objetivos{
+            border: 1px solid white;
+            width: 50%;
+            padding: 10px;
+            margin-left: 320px;
+        }
+        ul{
+            border: 1px dashed white;
+            margin: 10px;
+            padding: 30px;
+        }
+        span{
+            color: white;
+            font-size: 25pt;
+            background-color: rgba(0, 183, 255, 0.466);
+            padding: 5px;
+            margin: 15px;
+        }
+        li{
+            padding-top: 22px;
+            font-size: 18pt;
+        }
+        div#resultados{
+            box-shadow: 1px 1px 10px black;
+            width: 60%;
+            text-align: center;
+            margin-left: 255px;
+            margin-top: 100px;
+            padding: 10px;
+            background-color: white;
+            color: black;
         }
     </style>
 </head>
 <body>
-    <h1>Hola, mundo!</h1>
-    <p>Ya me libré de la maldición!!<p>
+    <header>
+        <h1>AULA 4</h1>
+        <h2>Ejercicio N. 1</h2>
+    </header>
+    <div id="objetivos">
+        <ul>
+            <span>Qué aprendimos en este clase?</span> 
+            <li>Comando: <code>window.alert()</code></li>
+            <li>Comando: <code>window.prompt()</code></li>
+            <li>Imprimimos: <code>"Hola, mundo!"</code></li>
+    </div> 
+
+    <div id="resultados">
+        <span>Resultado</span>
+        <h2>Hola, mundo!</h1>
+        <p>Ya me libré de la maldición!!<p>
+    </div>
+
     <script>
-       
         window.alert('Mi primer mensaje!')
         window.confirm('Te está gustando JS?')
         window.prompt('Cuál es tu nombre?')     
-
     </script>
 </body>
 </html>
