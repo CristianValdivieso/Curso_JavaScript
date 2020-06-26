@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(83, 114, 182);
+            color: white;
+            font: normal 18 pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudios com DOM</h1>
+    <p>Aquí va el resultado</p>
+    <p>Aprendiendo a utilizar <strong>DOM</strong></p>
+    <div id='msg'>Clique en aquí</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(p1.innerText)
+        p1.style.color = 'red'
+        corpo.style.background = 'black'
+        
+        var d = window.document.querySelector('div#msg') //cuando ID se usa (#), cuando clase se usa (.)
+        d.style.color = 'blue'
+        
+    </script>
+</body>
+</html>

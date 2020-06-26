@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n.4</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+        body{
+            font-family: 'Balsamiq Sans', cursive;
+            background-color: rgb(235, 182, 66);
+            color: rgb(0, 0, 0);
+            font-size: 20pt;
+        }
+        header{
+            box-shadow: 1px 1px 10px rgb(255, 255, 255);
+            text-align: center;
+            width: 50%;
+            margin-left: 330px;
+        }
+        h1{
+            color:rgb(0, 183, 255);
+            font-family: 'Notable', sans-serif;
+            font-size: 50pt;
+            text-shadow: 1px 2px black;
+        }
+        h2{
+            font-size: 22pt;
+        }
+        div{
+            border: 1px solid white;
+            width: 50%;
+            padding: 10px;
+            margin-left: 320px;
+        }
+        ul{
+            border: 1px dashed white;
+            margin: 10px;
+            padding: 30px;
+        }
+        span{
+            color: white;
+            font-size: 25pt;
+            background-color: rgba(0, 183, 255, 0.466);
+            padding: 5px;
+            margin: 15px;
+        }
+        li{
+            padding-top: 22px;
+            font-size: 18pt;
+        }
+        p#parrafo1{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AULA 6</h1>
+        <h2>Ejercicio N. 4</h2>
+    </header>
+    <div>
+        <ul>
+            <span>Qué aprendimos en este clase?</span> 
+            <li>Comando: <code>window.alert()</code></li>
+            <li>Comando: <code>window.prompt()</code></li>
+            <li>Comando: <code>document.write()</code></li>
+            <li>Comando: <code>.toUpperCase()</code></li>
+            <li>Comando: <code>.toLowerCase()</code></li>
+            <li>Comando: <code>'valor string'.length</code></li>
+        </ul>
+    </div> 
+    
+    <p id="parrafo1">Vamos a analizar tu nombre, aguarda un momento...<p>
+   <script>
+       
+       var nombre = window.prompt('Cuál es tu nombre?')
+       document.write(`Tu nombre, <strong>${nombre}</strong>, tiene ${nombre.length} letras.<br/>`)
+       window.alert('Hola, ' + nombre)
+       document.write(`Tu nombre en mayúsculas es: ${nombre.toUpperCase()}.<br/>`)
+       document.write(`Tu nombre en minúsculas es: ${nombre.toLowerCase()}.<br/>`)
+       let name = 'José María de la Vega y Torre'
+       document.write(`${name} tiene un total de ${name.length} letras. <br>`)
+       document.write(`En mayúsculas es: ${name.toUpperCase()}. <br>`)
+       document.write(`En minúsculas es: ${name.toLowerCase()}. <br>`)
+       document.write(nombre + ' ' + name + '<br/>')
+       document.write(`${nombre.toUpperCase()} ${name.toLowerCase()}`)
+              
+       // el uso de <br/> es para dar espacio hacia abajo
+       // el <strong> </strong> coloca en negrita la palabra
+       // en números: .toFixed(2) indica con dos casas decimales
+       // comando para formato real, dólar: n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+   </script> 
+</body>
+</html>

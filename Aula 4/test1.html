@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de nivel</title>
+    <style>
+        body{
+            background-color: rgba(124, 174, 238, 0.425);
+            font: italic 15pt Times;
+        }
+        h1{
+            color:rgb(170, 155, 19);
+            font: normal 25pt Arial;
+        }
+        p{
+            color:rgb(8, 83, 27);
+            font: normal 20pt Times;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Bienvenido al test de nivel</strong></h1>
+    <p>Este es el primer párrafo que escribes en tu página</p>
+    <p>Este es el segundo párrafo que escribes</p>
+
+    <script>
+        window.alert('Hola, este test es para comprobar si estás aprendiendo JavaScript')
+        window.confirm('Ahora, te vamos a pedir que ingreses tu nombre en la pantalla')
+        nombre = window.prompt('Cuál es tu nombre?')
+        window.alert(`Hola, ${nombre}, prosigamos con tu test`)
+        document.write(`Tu nombre, <strong>${nombre}</strong>, tiene ${nombre.length} letras.<br/>`)
+        document.write(`Tu nombre en mayúsculas es ${nombre.toUpperCase()}.<br/>`)
+        document.write(`Tu nombre en minúsculas es ${nombre.toLowerCase()}.<br/>`)
+        document.write('</br>')
+        n1 = Number.parseFloat(window.prompt(`${nombre}, ingresa un número: `))
+        n2 = Number.parseFloat(window.prompt(`ahora, ingresa el segundo número`))
+        suma = n1 + n2
+        resta = n1 - n2
+        multi = n1 * n2
+        divi = n1 / n2
+        document.write(`<strong>Resultado de las operaciones</strong>:</br> +  -  *  /  entre ${n1} e ${n2}<br/>`)
+        document.write(`Suma: ${suma}</br>Resta: ${resta}</br>Multiplicación: ${multi}</br>División: ${divi.toFixed(2)}`)
+    </script>
+</body>
+</html>

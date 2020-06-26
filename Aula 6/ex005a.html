@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros pasos con DOM</title>
+    <style>
+        body{
+            background-color: rgb(180, 96, 96);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            background-color: black;
+            color: white;
+            font: normal 30pt Arial;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        p{
+            background-color: blue;
+            margin-top: 30px;
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudios con DOM</h1> <!--Título principal-->
+    <p>Este es el primer párrafo</p>    <!--Párrafo 1-->
+    <p>Este es el segundo párrafo</p>   <!--Párrafo 2-->
+    <div id='mensaje'>Clica aquí</div>  <!--Para recuperar por id en script-->
+    <div name='nombre'>Hola, Cris</div> <!--Para recuperar por name en script-->
+    <div class='clase'>Hola, Joyce</div>
+    <script>
+        window.document.write('Hola, mundo</br>')
+        window.document.write(window.navigator.appName)
+        window.document.write('</br>')
+        window.document.write(window.document.URL)
+        window.document.write('</br>')
+      
+        //Recuperando elementos by tag name
+        var p1 = window.document.getElementsByTagName('p')[0]   
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.write(p1.innerText)
+        window.document.write('</br>')
+        p1.style.color = 'black'
+        p1.style.backgroundColor = 'yellow'
+        window.document.write(p2.innerHTML)
+
+        //Recuperando elemento por id
+        var d = window.document.getElementById('mensaje')
+        d.style.backgroundColor = 'green'
+        d.innerText = 'Así cambio el -clica aquí- por otro texto'
+        
+        //Recuperando elemento por name
+        var c = window.document.getElementsByName('nombre')[0]
+        window.document.write('</br>')
+        window.document.write(c.innerText)
+        c.style.backgroundColor = 'red'
+
+        //Recuperando por Query selector por ID (se usa #)
+        var e = window.document.querySelector('div#mensaje')
+        e.style.color = 'brown'
+        e.style.backgroundColor = 'white'
+
+        //Recuperando por Quer selector por Class (se usa < . >)
+        var f = window.document.querySelector('class.clase')
+        window.document.write(f.innerText)
+
+    </script>
+</body>
+</html>
