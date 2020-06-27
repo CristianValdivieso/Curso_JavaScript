@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimento</title>
+    <style>
+       body{
+           background-color: rgb(224, 224, 103);
+       }
+        h1{
+            background-color: black;
+            font: normal 30pt Georgia;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>EXPERIMENTO + - * /</h1>
+    <p><strong>Operaciones matemáticas</strong></p>
+    <input type="number" name="" id="texton1"> y
+    <input type="number" name="" id="texton2">
+    <input type="button" value="calcular" onclick="resultado()">
+    <div id="operar"></div>
+    <script>
+        function resultado(){
+            var texton1 = document.getElementById('texton1')
+            var texton2 = document.getElementById('texton2')
+            var operar = document.getElementById('operar')
+
+            var n1 = Number(texton1.value)
+            var n2 = Number(texton2.value)
+            var suma = n1 + n2
+            var resta = n1 - n2
+            var mult = n1 * n2
+            var div = n1 / n2
+            operar.innerHTML = `Las operaciones entre ${n1} y ${n2} son:</br>
+            Suma = ${suma}</br>Resta = ${resta.toFixed(2)}</br>Multiplicación = 
+            ${mult.toFixed(2)}</br>División = ${div.toFixed(2)}`
+        }
+    </script>
+</body>
+</html>
