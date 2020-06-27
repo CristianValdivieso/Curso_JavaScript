@@ -4,25 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
-    <style>
-        body{
-            background-color: rgb(83, 114, 182);
-            color: white;
-            font: normal 18 pt Arial;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Iniciando estudios com DOM</h1>
+    <header>
+        <h1>AULA 9</h1>
+        <h2>Ejercicio N. 5</h2>
+        
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Qué aprendimos en este clase?</span> 
+            <li>DOM -<code> Documento Object Model</code></li>
+            <li>Declaración de variables</li>
+            <li>Cambio características de las variables mediante DOM:</li>
+            <ul id="ulex5">
+                <li><code>window.document.getElementsByTagName</code></li>
+                <li><code>window.document.getElementById</code></li>
+                <li><code>window.document.querySelector()</code></li>
+                <li>Toma texto sin formato: <code>innerText</code></li>
+                <li>Toma texto con formato: <code>innerHTML</code></li>
+            </ul>
+        </ul>
+    </div> 
+
+    <h2>Iniciando estudios com DOM</h1>
     <p>Aquí va el resultado</p>
     <p>Aprendiendo a utilizar <strong>DOM</strong></p>
     <div id='msg'>Clique en aquí</div>
     <script>
         var corpo = window.document.body
+        corpo.style.background = 'black'
+        corpo.style.color = 'white'
+
         var p1 = window.document.getElementsByTagName('p')[1]
         window.document.write(p1.innerText)
         p1.style.color = 'red'
-        corpo.style.background = 'black'
+
+        var hdos = window.document.getElementsByTagName('h2')[1]
+        hdos.style.color = 'black'
+        hdos.style.fontSize = '25pt'
+        hdos.style.textAlign = 'center'
+        hdos.style.marginTop = '100px'
+        hdos.style.marginLeft = '310px'
+        hdos.style.border = '1px solid white'
+        hdos.style.width = '50%'
+        hdos.style.padding = '20px'
+        hdos.style.backgroundColor = 'white'
+
         
         var d = window.document.querySelector('div#msg') //cuando ID se usa (#), cuando clase se usa (.)
         d.style.color = 'blue'
