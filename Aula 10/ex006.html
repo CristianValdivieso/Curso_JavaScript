@@ -4,30 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
+    <link rel="stylesheet" href="../Aula 6/style.css">
     <style>
         div#area {
             font: normal 20pt Arial;
             background-color: green;
+            box-shadow: 1px 1px 10px white;
             color: white;
-            width: 200px;
+            width: 400px;
             height: 200px;
             text-align: center;
+            line-height: 200px;
+            margin-top: 50px;
+            margin-left: 450px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>AULA 10</h1>
+        <h2>Ejercicio N. 6</h2>
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Qué aprendimos en este clase?</span> 
+            <li>Funciones <code>function nombre(parámetro)</code></li>
+            <li>En HTML: <code>onclick="función()"</code></li>
+            <li>En JS: <code>id.addEventListener('click', función)</code></li>
+        </ul>
+    </div> 
+
     <div id="area">
         Interactúe...
     </div>
     <script>
          var area = window.document.getElementById('area')
-         area.addEventListener('click', clicar)
+
+         area.addEventListener('click', clicar) //Así se llama al evento directo en JS
          area.addEventListener('mouseenter', entrar)
          area.addEventListener('mouseout', salir)
 
         function clicar(){
             area.innerText = 'Clicou!'
-            area.style.background = 'red'
+            area.style.background = "url('https://images.vexels.com/media/users/3/72688/preview2/a7c4b20e9bf9c64ce9b455a5f2e371a9-espaco-estrelas-fundo.jpg')"
         }
         function entrar(){
             area.innerText = 'Entrou'
@@ -37,6 +56,9 @@
             area.style.background = 'green'
         }
 
+        //Para alterar fondo café en este ejercicio
+        var corpo = document.body
+        corpo.style.background = 'brown'
     </script>
 </body>
 </html>

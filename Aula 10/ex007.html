@@ -4,36 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumando número</title>
+    <link rel="stylesheet" href="../Aula 6/style.css">
     <style>
-        body{
-            font: normal 18pt Arial;
-        }
         input{
             font: normal 18pt Arial;
             width: 100px;
+            text-align: center;
         }
         div#res{
-            margin-top: 20px;                                       /*da espacio entre el input y el resultado*/
-        }                                                           /*evitar uso de </br> para dar espacios*/
+            margin-top: 20px; 
+            margin-left: 330px;
+            border: 1px solid black;  
+            width: 50%;    
+            text-align: center;                          
+       }
+
     </style>
 </head>
 <body>
-    <h1>Sumando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn2" id="txtn2">                   <!--input aquí-->
-    <input type="button" value="Sumar" onclick="sumar()">
-    <div id="res">Resultado</div>
+    <header>
+        <h1>AULA 10</h1>
+        <h2>Ejercicio N. 7</h2>
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Qué aprendimos en este clase?</span> 
+            <li>Función sumar</li>
+            <li>Variable tn1: <code>vincula variable al input</code></li>
+            <li>Variable n1: <code>toma el valor del input y lo transforma en número</code></li>
+        </ul>
+    </div> 
+    <div id="res">
+        <h2>Sumando Valores</h2>
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2">                   <!--input aquí-->
+        <input type="button" value="Sumar" onclick="sumar()"><br>
+        <p>Resultado</p> 
+    </div>
+
     <script>
         function sumar(){
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document.querySelector('input#txtn2')  // ver que arriba es input
             var res = window.document.getElementById('res')
-            var n1 = Number(tn1.value)                              //transformando los valores string en number
-            var n2 = Number(tn2.value)                              //el <value> es el valor que está dentro de tn2
+            var n1 = Number(tn1.value)                             //transforma valor string en number
+            var n2 = Number(tn2.value)                             //<value> pega valor dentro de tn2
             var s = n1 + n2
-            res.innerHTML = `La suma entre ${n1} e ${n2} es igual a ${s}`
-        
+            res.innerHTML = `La suma entre ${n1} e ${n2} es igual a <strong>${s}</strong>`
         }
+    
+        //Cambios estilo
+        document.body.style.backgroundColor = 'green'
     </script>
 </body>
 </html>
