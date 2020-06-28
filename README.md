@@ -1,2 +1,2 @@
 # Curso_JavaScript
- Aulas detalhadas del Curso em Video, ofrecido por el professor Gustavo Guanabara
+ Aulas detalhadas do Curso em Video, ofrecido pelo professor Gustavo Guanabara
