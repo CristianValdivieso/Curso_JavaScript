@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETRAN</title>
+    <link rel="stylesheet" href="../Aula 6/style.css">
+    <style>
+        div#res{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            margin-top: 80px;
+        }
+        input{
+            text-align: center;
+        }
+        img{
+            margin-top: -180px;
+        }
+    </style>
 </head>
 <body>
-    <H1>SISTEMA DE MULTAS</H1>
+    <header>
+        <h1>AULA 11</h1>
+        <h2>Ejercicio N. 10</h2>
+    </header>
+
+    <div id="encabezado">
+        <ul>
+            <span>Qué aprendimos en este clase?</span> 
+            <li>Condición: <code>if(){bloque}</code></li>
+            <li>var.innerHTML(+=): <code>permite concatenar las frases</code></li>
+        </ul>
+    </div>
+
+    <h2><strong>SISTEMA DE MULTAS</strong></h2>
+    <div id="res">
     Velocidad del carro <input type="number" name="vel" id="txtvel"> km/h
-    <input type="button" value="verificar" onclick="calcular()">
-    <div id="res"></div>
-    
+    <input type="button" value="verificar" id="calc">
+    </div>
+    <img src="https://images.vexels.com/media/users/3/154707/isolated/preview/26202fd0240460201a8e8865ecedc02a-silhueta-de-vista-lateral-de-carro-de-coleta-by-vexels.png" width="300px" alt="">
     <script>
-       function calcular(){
-           var txtv = document.querySelector('input#txtvel')
-           var res = document.querySelector('div#res')
-           var vel = Number(txtv.value)                         //así se recoge el valor de la caja de texto
-           res.innerHTML = `<p>Su velocidad es de ${vel} km/h<p>`
-           if (vel > 60){
-               res.innerHTML += `<p>Usted está <strong>multado</strong><p>`
-           }
-           res.innerHTML += `<p>Dirija siempre con cinturón de seguridad<p>`
-       }
+        var calc = document.querySelector('input#calc')
+        calc.addEventListener('click', calcular)
+
+        function calcular(){
+            var tvel = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(tvel.value)
+            res.innerHTML = `<p>Su velocidad es de ${vel} km/h.</p>`
+            if(vel > 60){
+                res.innerHTML += `<p>Exceso de velocidad. <strong>MULTADO!</strong></p>`
+            }
+            res.innerHTML += `<p>ALERTA: utilice cinturón de seguridad</p>`
+        }
+
+       //Cambio de estilo
+       document.body.style.backgroundColor = 'lightskyblue'
     </script>
 </body>
 </html>

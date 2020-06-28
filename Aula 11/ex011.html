@@ -4,22 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../Aula 6/style.css">
     <style>
-        h1{
-            font: normal 20pt Georgia;
+        h2{
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+        }
+        div#res{
+            text-align: center;
+            left: 500px;
+        }
+        input#lugar{
+            text-align: center;
+            width: 130px;
+            font-size: 16pt;
+        }
+        img{
+            margin-left: 500px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>NACIONAL O EXTRANJERO?</h1>
-    <input type="text" name="" id="lugar">
-    <input type="button" value="analizar" onclick="nacionalidad()">
-    <div id = "país"></div>
+    <header>
+        <h1>AULA 11</h1>
+        <h2>Ejercicio N. 11</h2>
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Qué aprendimos en este clase?</span> 
+            <li>Condición: <code>if(){bloque}</code></li>
+            <li>var.innerHTML(+=): <code>permite concatenar las frases</code></li>
+        </ul>
+    </div>
+
+    <h2>NACIONAL O EXTRANJERO?</h2>
+    <div id="res">
+        Indique su país de residencia: 
+        <input type="text" name="" id="lugar">
+        <input type="button" value="analizar" id="click" onclick="nacionalidad()">
+    </div>
+    <img src="https://www.pngkit.com/png/full/78-789604_logo-mundo-png-future-of-the-world-is.png" alt="">
 
     <script>
+        /*
         function nacionalidad(){
             var país = window.document.querySelector('input#lugar')
-            var lugar = window.document.querySelector('div#país')
+            var lugar = window.document.querySelector('div#res')
             var loc = String(país.value)
             if (loc == 'Brasil'){
                 lugar.innerHTML += `<p>Usted es brasilero<p>`
@@ -27,8 +59,26 @@
            else{
            lugar.innerHTML += `<p>Usted es del exterior<p>`
             }
-        }
-    </script>
+        }*/
 
+        //Para crear función desde JS
+
+        var click = document.querySelector('input#click')
+        click.addEventListener('click',nacionalidad)
+        function nacionalidad(){       
+            var tlugar = document.querySelector('input#lugar')
+            var lugar = String(tlugar.value)
+            var res = document.querySelector('div#res')
+            if(lugar == 'Brasil'){
+                res.innerHTML = `<p>Usted es brasileiro</p>`
+            } else{
+                res.innerHTML = `<p>Ustede es extranjero</p>`
+                }
+            }
+        
+        //Estilo para body
+        document.body.style.backgroundColor = 'maroon'
+        document.body.style.color = 'white'
+    </script>
 </body>
 </html>
