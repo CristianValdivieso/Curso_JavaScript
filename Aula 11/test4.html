@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOR</title>
+</head>
+<body>
+    <h1>Experimento con colores</h1>
+    <input type="color" name="" id="color">
+    <input type="button" value="confirma" onclick="col()">
+    <div id="colores">COLOR</div>
+
+    <script>
+        function col(){
+            var txtcolor = document.querySelector('input#color')
+          //  var color = Number(textcolor.value) //VER CUÁL ES EL COMANDO
+          //  var colores = document.querySelector('div#colores')
+          //  colores.innerHTML = `El color que elegiste es ${color}`
+            var colores = document.querySelector('div#colores')
+            colores.innerHTML = 'blue'
+
+        }
+    </script>
+</body>
+</html>

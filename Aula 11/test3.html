@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FECHA</title>
+</head>
+<body>
+    <h1>Experimento con la FECHA</h1>
+    <input type="date" name="" id="tiempo"> --
+    <input type="button" value="Confirmar" onclick="fecha()">
+    <div id="data"></div>
+
+    <script>
+        function fecha(){
+            var txtfecha = window.document.querySelector('input#tiempo')
+            var fecha = String(txtfecha.value)
+            var data = window.document.querySelector('div#data')
+            data.innerHTML = (`<p>La fecha es ${fecha}<p>`)
+        }
+    </script>
+</body>
+</html>

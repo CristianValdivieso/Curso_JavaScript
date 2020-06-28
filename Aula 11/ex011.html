@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font: normal 20pt Georgia;
+        }
+    </style>
+</head>
+<body>
+    <h1>NACIONAL O EXTRANJERO?</h1>
+    <input type="text" name="" id="lugar">
+    <input type="button" value="analizar" onclick="nacionalidad()">
+    <div id = "país"></div>
+
+    <script>
+        function nacionalidad(){
+            var país = window.document.querySelector('input#lugar')
+            var lugar = window.document.querySelector('div#país')
+            var loc = String(país.value)
+            if (loc == 'Brasil'){
+                lugar.innerHTML += `<p>Usted es brasilero<p>`
+           }
+           else{
+           lugar.innerHTML += `<p>Usted es del exterior<p>`
+            }
+        }
+    </script>
+
+</body>
+</html>
