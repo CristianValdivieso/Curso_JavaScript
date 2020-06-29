@@ -1,0 +1,42 @@
+header{
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(238, 200, 30);
+    padding: 1px;
+    background-color: rgb(41, 41, 41);
+}
+body{
+    background-color: rgb(233, 97, 64);
+}
+section{
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 20px;
+    padding: 11px;
+    text-align: left;
+    font: normal 20pt Times;
+    width: 700px;
+    margin: auto;
+}
+footer{
+    text-align: center;
+    padding: 500px;
+    color: white;
+}
+input#name{
+    font-size: 15pt;        /*Cambia fuente cuadro nombre*/
+    font-style: italic;     /*Cambia estilo fuente*/ 
+    width: 492px;           /*Altera largo cuadro nombre*/
+    height: 30px;           /*Altera ancho cuadro nombre*/
+}
+div#res{
+    font-size: 18pt;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgb(163, 157, 157);
+    background-color: rgb(224, 172, 28);
+    width: 550px;
+    height: 50px;
+    margin: auto;
+    border-radius: 20px;
+}

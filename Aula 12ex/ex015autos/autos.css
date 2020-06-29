@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(24, 22, 22);
+}
+header{
+    color: white;
+    font: normal 12pt Arial;
+    text-align: center;
+}
+section{
+    margin: auto;
+    /*margin-top: 10px;                            /*Distancia cuadro cálculo y section*/
+    background-color: rgb(153, 107, 65);
+    text-align: center;
+    border-radius: 30px;                           /*El radio de la borda del cuadro*/
+    padding: 15px;                                 /*Anchura del cuadro */                                 
+    width: 450px;                                  /*La largura del cuadro*/
+    box-shadow: 5px 5px 10px rgb(255, 252, 252); /*El 10px es la difusión total del sombreado*/
+}
+div#msg{
+    padding: 5px;
+    margin: auto;
+    width: 250px;
+    text-align: center;
+    border-radius: 15px;
+    color: rgb(204, 243, 204);
+    background-color: rgb(185, 63, 32);
+}
+footer{
+    text-align: center;
+    color: white;
+    font: normal 8pt Arial;
+}

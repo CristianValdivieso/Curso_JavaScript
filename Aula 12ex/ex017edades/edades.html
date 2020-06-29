@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad</title>
+    <link rel="stylesheet" href="edades.css">
+</head>
+<body>
+    <header>
+       <h1>
+           COMPROBANDO EDADES
+        </h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Fecha de nacimiento - 
+                <input type="number" name="txtano" id="txtano">
+            </p>
+            <p> Género: 
+                <input type="radio" name="radgenero" id="masculino" checked>  <!--RADIO es para las bolitas. Con CHECKED ya aparace seleccionado-->
+                <label for="masculino">Masculino</label> <!--crea la palabra 'Masculino' para selección-->
+                <input type="radio" name="radgenero" id="femenino">
+                <label for="femenino">Femenino</label>
+
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Llene con sus datos
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; CDVO</p>
+    </footer>
+    <script src="edades.js"></script>
+</body>
+</html>

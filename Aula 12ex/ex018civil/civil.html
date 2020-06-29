@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado civil</title>
+    <link rel="stylesheet" href="civil.css">
+</head>
+<body>
+    <header>
+        <h1>
+            ESTADO CIVIL
+        </h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Nombre:  
+                <input type="text" name="name" id="name">                
+            </p>
+            <p>
+                Estado civil:
+                <input type="radio" name="radcivil" id="soltero" checked>
+                <label for="soltero">Soltero(a)</label>
+                <input type="radio" name="radcivil" id="casado">
+                <label for="casado">Casado(a)</label>
+                <input type="radio" name="radcivil" id="divorciado">
+                <label for="divorciado">Divorciado(a)</label>
+            </p>
+            <p>
+                <input type="button" value="Analizar" onclick="analizar()">
+            </p>
+        </div>
+        <div id="res">
+            Complete sus datos
+        </div>
+    </section>
+    <footer>
+        <p>&copy;CDVO</p>
+    </footer>
+    <script src="civil.js"></script>
+</body>
+</html>
