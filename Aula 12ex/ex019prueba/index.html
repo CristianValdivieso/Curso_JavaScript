@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Aula 6/style.css">
+    <style>
+        body{
+            background: url('https://i.pinimg.com/originals/1b/75/9c/1b759cfeca110477d7c1f824984ba5f0.jpg') no-repeat;
+            background-size: cover;
+        }
+        h1{
+            color: white;
+        }
+        h2{
+            text-align: center;
+            color: white;
+        }
+        div#encabezado{
+            border: none;
+        }
+        div#encabezado span{
+            text-align: center;
+        }
+        ul{
+            border: none;
+            box-shadow: none;
+            color: white;
+        }
+        section{
+            text-align: center;
+            width: 550px;
+            margin-left: 400px;
+            margin-bottom: 30px;
+            box-shadow: 1px 1px 10px white;   
+        }
+        div#lugar{
+            background-color: rgb(82, 82, 126);
+        }
+        div#img img{
+            width: 500px;
+            height: 400px;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="cargar()">
+    <header>
+        <h1>AULA 12</h1>
+        <h2>Ejercicio N. 19 - Condiciones IF y SWITCH</h2>
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Instrucciones</span>
+            <li>Crear <code>function()</code> utilizando un dato ingresado por prompt():</li> 
+            <li>Ingresar na ciudad por medio del prompt()</li>
+            <li>Guardar la ciudad y mostrarla en la div</li>
+            <li>Alterar la imagen conforme la ciudad ingresada</li>
+        </ul>
+    </div>
+    <h2>LUGARES DEL MUNDO</h2>
+    <section>
+        <div id="lugar">
+        </div>
+        <div id="img">
+            <img id="foto" src="" alt="">
+        </div>
+    </section>
+
+    <footer>
+        &copy;Cristian Valdivieso
+    </footer>
+
+    <script>
+        var nombre = window.prompt('Digite su nombre:')
+        var ciudad = window.prompt('Ingresa un lugar entre Madrid, Porto o Praga:')
+        /*function cargar(){
+            var lugar = document.querySelector('div#lugar')
+            var foto = document.querySelector('img#foto')
+            lugar.innerHTML = `${nombre}, bienvenido a <strong>${ciudad}<strong/>`
+
+            if(ciudad == "Madrid"){
+                foto.src='https://okdiario.com/img/2020/03/05/madrid-podria-tener-la-noria-mas-grande-de-europa-655x368.jpg'
+            } else if (ciudad == "Porto"){
+                foto.src='https://www.kayak.com.br/news/wp-content/uploads/sites/12/2020/02/dest_portugal_porto_douro-river_gettyimages-698822614_universal_within-usage-period_46109-1640x1312.jpg'
+            } else if(ciudad == "Praga"){
+                foto.src='https://aws.traveler.es/prod/designs/v1/assets/940x627/148019.jpg'
+            } else{
+                lugar.innerHTML = `<strong>[ERROR]<strong/><br>`
+                lugar.innerHTML += `Ingrese otra ciudad`
+                foto.src='https://thumbs.dreamstime.com/b/collage-de-la-comida-cosas-y-del-lugar-para-el-mundo-136045518.jpg'
+            }
+        }*/
+
+        function cargar(){
+            var lugar = document.getElementById('lugar')
+            var foto = document.getElementById('foto')
+            lugar.innerHTML = `${nombre}, bienvenido a <strong>${ciudad}<strong/>`
+            
+            switch(ciudad){
+                case "Madrid":
+                    foto.src='https://okdiario.com/img/2020/03/05/madrid-podria-tener-la-noria-mas-grande-de-europa-655x368.jpg'
+                    break
+                case "Porto":
+                    foto.src='https://www.kayak.com.br/news/wp-content/uploads/sites/12/2020/02/dest_portugal_porto_douro-river_gettyimages-698822614_universal_within-usage-period_46109-1640x1312.jpg'
+                    break
+                case "Praga":
+                    foto.src='https://thumbs.dreamstime.com/b/collage-de-la-comida-cosas-y-del-lugar-para-el-mundo-136045518.jpg'
+                    break
+                default:
+                    lugar.innerHTML = `<strong>[ERROR]<strong/><br>`
+                    lugar.innerHTML += `Ingrese otra ciudad`
+                    foto.src='https://thumbs.dreamstime.com/b/collage-de-la-comida-cosas-y-del-lugar-para-el-mundo-136045518.jpg'
+            }       
+        }
+    </script>
+</body>
+</html>'
