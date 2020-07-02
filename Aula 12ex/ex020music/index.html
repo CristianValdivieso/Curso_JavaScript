@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Aula 6/style.css">
+    <style>
+        body{background:url('https://images.alphacoders.com/598/thumb-1920-598655.png') no-repeat; background-size: cover; color: white;}
+        h1{color: white;}
+        h2{text-align: center; color: white;}
+        section{border: 1px solid black; width: 600px; text-align: justify; margin-top: 100px; margin-left: 350px; padding: 15px; margin-bottom: 200px; font-size: 15pt; background-color: black; border-radius: 15px 50px;}
+        div#encabezado{border: none; width: 430px;}
+        ul,li{border: none; font-size: 12pt; text-align: justify;}
+        span{margin-left: -20px; background-color: black;font-size: 16pt;}
+        input{font-size: 15pt; margin: 10px;}
+        input#boton{margin-left: 400px; margin-top: -50px;}
+        div#res{text-align: center;}
+        footer{text-align: center;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AULA 12</h1>
+        <h2>Ejercicio N. 20 - Condición IF</h2>
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Instrucciones</span>
+            <li>Cree un programa que lea una fecha aaaa</li>
+            <li>Utilice input de <code>type="radio"</code> para escoger el género musical</li>
+            <li>Ejecute función con click en la imagen. Presente diversas informaciones dependiendo del intervalo de fechas elegido</li>
+        </ul>
+    </div>
+    <section>
+        <div id="fecha">
+            Fecha
+            <input type="number" name="" id="txtnum" min="1900" max="2020" maxlength="4"><br>
+            <input type="radio" name="rad" id="salsa" checked> <label for="salsa">Clásica</label>
+            <input type="radio" name="rad" id="rock"><label for="rock">Rock</label>
+            <input type="radio" name="rad" id="pop"><label for="pop">Pop</label><br>
+            <input id="boton" type="image" src="https://i.ya-webdesign.com/images/nota-de-sol-png-5.png" width="70px">
+        </div>
+        <div id="res">
+        Ingrese una fecha entre 1900 y 2020
+        </div>
+        
+    </section>
+
+    <footer>
+        &copy;Cristian Valdivieso
+    </footer>
+
+    <script>
+        var analizar = document.getElementById('boton')
+        analizar.addEventListener('click', verificar)
+
+        function verificar(){
+            var fecha = document.getElementById('txtnum')
+            var musica = document.getElementsByName('rad')
+            var res = document.querySelector('div#res')
+
+            if(fecha.value < 1900 || fecha.value > 2020){
+                window.alert("[ERROR] Fecha inválida!")
+            }else{
+                var foto = document.createElement('img')
+                foto.setAttribute('id', 'foto')
+                if(musica[0].checked){
+                    res.innerHTML = 'LA MÚSICA <strong>CLÁSICA<strong/><br><br>'
+                    if(fecha.value >= 1900 && fecha.value < 1910){
+                        //Clásica 1910: IMPRESIONISMO DEBUSSY - SATIE
+                        res.innerHTML += 'Desde finales del siglo XIX hasta inicios del XX, la música se encontraba contenida en el Impresionismo. Algunos autores famosos de este periodo son Claude Debussy y Erik Satie.<br><br>' 
+                        foto.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Satie_and_Friends_Montage.jpg/440px-Satie_and_Friends_Montage.jpg')               
+                    }else if(fecha.value <= 1975){
+                        //Clásica 1910-1975: MODERNISMO
+                        res.innerHTML += 'Entre 1910 y 1975, la música experimentaba su periodo del Modernismo. Uno de los principales exponentes es Marinetti.<br><br>'
+                        foto.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Luigi_Russolo_ca._1916.gif/180px-Luigi_Russolo_ca._1916.gif')
+                    }else{
+                        //MÚSICA MODERNA
+                        res.innerHTML += 'A partir de 1975, la música se ha diversificado sobremanera. El Jazz ha tenido profunda influencia, y diversos ritmos han emergido de las diversas fusiones musicales.<br><br>'
+                        foto.setAttribute('src', 'https://revistaevolucionmusical.files.wordpress.com/2012/06/138328_rock-n-roll.jpg')
+                    }
+                } else if(musica[1].checked){
+                    res.innerHTML = 'LA MÚSICA <strong>ROCK<strong/><br><br>'
+
+                } else if(musica[2].checked){
+                    res.innerHTML = 'LA MÚSICA<strong>POP<strong/><br><br>'
+                }
+                res.appendChild(foto)
+            }
+        }
+    </script>
+</body>
+</html>
