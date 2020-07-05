@@ -116,47 +116,39 @@
         function capo(){
             foto.setAttribute('src', 'https://imagensemoldes.com.br/wp-content/uploads/2018/06/Emoji-%C3%93culos-de-Sol-PNG-1200x1200.png')
             if(veces[0].checked){
-                while(c <= 2){
+                do{
                     res.innerHTML += `El capo n. ${c} está despierto<br>`
                     c++
-                }
+                }while(c <= 2)
             } else if(veces[1].checked){
-                while(c <= 6){
+                do{
                     res.innerHTML += `El capo n. ${c} está despierto<br>`
                     c++
-                }
+                }while(c <= 6)
             } else if(veces[2].checked){
-                while(c <= 10){
+                do{
                     res.innerHTML += `El capo n. ${c} está despierto<br>`
                     c++
-                }
+                }while(c <= 10)
             }
         }
         boton3.addEventListener('click', beso)
         function beso(){
             foto.setAttribute('src', 'https://cdn.shopify.com/s/files/1/1061/1924/files/Kissing_Face_Emoji.png?8026536574188759287')
             if(veces[0].checked){
-                while(c <= 2){
+                for(c = 1; c <= 2; c++){
                     res.innerHTML += `${c} .o beso<br>`
-                    c++
                 }
             } else if(veces[1].checked){
-                while(c <= 6){
+                for(c = 1; c <= 6; c++){
                     res.innerHTML += `${c} .o beso<br>`
-                    c++
                 }
             } else if(veces[2].checked){
-                while(c <= 10){
+                for(c = 1; c <= 10; c++){
                     res.innerHTML += `${c} .o beso<br>`
-                    c++
                 }
             }
         }
-
-        // CONDICIONAL Y REPETICIÓN
-
-
-
     </script>
 </body>
 </html>
