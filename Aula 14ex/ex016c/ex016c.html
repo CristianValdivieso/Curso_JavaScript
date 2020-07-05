@@ -8,8 +8,9 @@
     <style>
         ul,li{border: none; font-size: 15pt;}
         span{font-size: 18pt; text-transform: uppercase;}
-        p{text-align: center;}
-        input{margin-left: 30px; margin-top: 20px;}
+        p{text-align: justify;}
+        p#fo{text-align: center;}
+        input{margin-left: 30px; margin-top: 10px; font-size: 12pt;}
         input#fin{margin-left: 51px;}
         input#ini{margin-left: 23px;}
         input#boton{margin-left: 0px; font-size: 15pt;}
@@ -34,11 +35,11 @@
     </div>
     <section>
         <div id="form">
-            <p><strong>Formulario</strong><br></p> 
-            Inicio <input type="number" name="" id="ini"><br>
-            Fin <input type="number" name="" id="fin"> <br>
-            Paso <input type="number" name="" id="pas"><br>
-            <input id="boton" type="button" value="analizar">            
+            <p id="fo"><strong>Formulario</strong><br></p> 
+            <p>Inicio <input type="number" name="" id="ini"></p>
+            <p>Fin <input type="number" name="" id="fin"></p>
+            <p>Paso <input type="number" name="" id="pas"></p>
+            <p><input id="boton" type="button" value="analizar"></p>          
         </div>
         <div id="res">
             <p><strong>Resultado</strong><br></p> 
@@ -81,6 +82,10 @@
                     window.alert('Alterar valores en inicio o fin')
                     inicio = 1
                     fin = 10
+                }
+                if(inicio == fin){
+                    window.alert('Inicio y Fin deben ser distintos. Sumaremos 30 pasos al fin')
+                    fin += 30
                 }
                 if(inicio < fin){
                     for(var c = inicio; inicio <= fin; inicio = inicio + paso){
