@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Aula 6/style.css">
+    <style>
+        ul,li{border: none; font-size: 15pt;}
+        span{font-size: 18pt; text-transform: uppercase;}
+        p{text-align: center;}
+        input{margin-left: 30px; margin-top: 20px;}
+        input#fin{margin-left: 51px;}
+        input#ini{margin-left: 23px;}
+        input#boton{margin-left: 0px; font-size: 15pt;}
+    </style>
+</head>
+<body>
+    <header id="hh">
+        <h1>AULA 14</h1>
+        <h2>Ejercicio N. 16</h2>
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Instrucciones</span>
+            <li>Con estructuras condicionales y repeticiones realize:</li>
+            <ol>
+                <li>Programa que lea inicio, fin y paso para el conteo</li>
+                <li>Emita mensaje caso los datos estén vacíos</li>
+                <li>Asegúrese que el programa realice cuenta regresiva</li>
+                <li>Inserte un emoji en el looping</li>
+            </ol>
+        </ul>
+    </div>
+    <section>
+        <div id="form">
+            <p><strong>Formulario</strong><br></p> 
+            Inicio <input type="number" name="" id="ini"><br>
+            Fin <input type="number" name="" id="fin"> <br>
+            Paso <input type="number" name="" id="pas"><br>
+            <input id="boton" type="button" value="analizar">            
+        </div>
+        <div id="res">
+            <p><strong>Resultado</strong><br></p> 
+        </div>
+    </section>
+    <script>
+        //VARS
+        var form = document.getElementById('form')
+        var res = document.getElementById("res")
+        //STYLE
+        document.body.style.backgroundColor = 'LightSeaGreen'
+        document.getElementById('encabezado').style.border = 'none'
+        form.style.width = '50%'; form.style.marginLeft = '320px'; form.style.textAlign='justify'
+        form.style.boxShadow='1px 1px 1px 10px PeachPuff'; form.style.marginTop='50px'
+        form.style.padding='20px'
+        res.style.width = '50%'; res.style.marginLeft = '320px'; res.style.textAlign='justify'
+        res.style.boxShadow='1px 1px 1px 10px PeachPuff'; res.style.marginTop='50px'
+        res.style.marginBottom='200px'; res.style.padding='20px'
+
+        //CODE
+        var analizar = document.getElementById('boton')
+        analizar.addEventListener('click', analisis)
+        
+        function analisis(){
+            var tinicio = document.getElementById('ini')
+            var tfin = document.getElementById('fin')
+            var tpaso = document.getElementById('pas')
+
+            if(tinicio.value.length == 0 || tfin.value.length == 0 || tpaso.value.length == 0){
+                window.alert('Complete los datos')
+            } else {
+                var inicio = Number(tinicio.value)
+                var fin = Number(tfin.value)
+                var paso = Number(tpaso.value)
+                if(paso <= 0){
+                    window.alert('Paso inválido, considerar paso [1]')
+                    paso = 1
+                }
+                if(inicio == 0 && fin == 0){
+                    window.alert('Alterar valores en inicio o fin')
+                    inicio = 1
+                    fin = 10
+                }
+                if(inicio < fin){
+                    for(var c = inicio; inicio <= fin; inicio = inicio + paso){
+                        res.innerHTML += `Avanzando ${inicio} pasos.\ud83c\udf00<br>` 
+                    } 
+                } else if (inicio > fin){
+                    for(c = inicio; inicio >= fin; inicio = inicio - paso){
+                        res.innerHTML += `Retrocediendo ${inicio} pasos.\ud83c\udf09<br> `
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
