@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="estilo.css"> <!--Crea ventana con formato CSS-->
+</head>
+<body>
+    <header>
+        <h1>
+            Vamos a hacer el conteo
+        </h1>
+    </header>
+    <section>                                 
+        <div id="datos">
+            <p>
+                Inicio:  <input type="number" name="inicio" id="txtinicio">        
+            </p>
+            <p>
+                Fin: <input type="number" name="fin" id="txtfin">
+            </p>
+            <p>
+                Paso: <input type="number" name="paso" id="txtpaso">
+            </p>
+            <p><input type="button" value="Contar" onclick="ccontar()"></p>
+        </div>
+        <div id="contar">
+            Preparando el conteo...
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
