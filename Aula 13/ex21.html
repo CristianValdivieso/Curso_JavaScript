@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Aula 6/style.css">
+    <style>
+        input{
+            margin: 10px;
+        }
+        ul{
+            list-style: none;
+        }
+        img#foto{
+            margin-top: -250px;
+        }
+        div#res{
+            box-shadow: 3px 3px 5px 2px blue;
+            text-align: center;
+            width: 50%;
+            margin-left: 335px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header id="hh">
+        <h1>AULA 13</h1>
+        <h2>Ejercicio N. 21 - Repetición WHILE()</h2>
+    </header>
+    <div id="encabezado">
+        <ul>
+            <span>Instrucciones</span>
+            <li>Utilizando la estructura <code>WHILE()</code> realize:</li>
+            <ol>
+                <li>Programa que repita una imagen 10 veces</li>
+                <li>Presente la imagen en una <code>div</code> con <code>id</code> llamada img</li>
+            </ol>
+        </ul>
+    </div>
+
+    <section>
+        <div id="img">
+            Elija una opción<br>
+            <input id="boton1" type="button" value="Amor"><input id="boton2" type="button" value="Capo"><input id="boton3" type="button" value="Beso"><br>
+            <ul>
+                <li><input type="radio" name="rad" id="dos" checked><label for="dos">2X</label></li>
+                <li><input type="radio" name="rad" id="tres"><label for="tres">6X</label></li>
+                <li><input type="radio" name="rad" id="cuatro"><label for="cuatro">10X</label></li>
+            </ul>
+            <img id="foto" src="https://cdn.shopify.com/s/files/1/1061/1924/files/Hugging_Face_Emoji_2028ce8b-c213-4d45-94aa-21e1a0842b4d_large.png?15202324258887420558" width="300px" alt="">
+        </div>
+        <div id="res">
+            <strong>Resultado aquí</strong><br>
+        </div>
+    </section>
+    <script>
+        // STYLE
+        var boton1 = document.getElementById('boton1')
+        boton1.style.fontSize = '15pt'
+        var boton2 = document.getElementById("boton2")
+        boton2.style.fontSize = '15pt' 
+        var boton3 = document.getElementById("boton3")
+        boton3.style.fontSize = '15pt' 
+        var imagen = document.getElementById('img')
+        imagen.style.textAlign = 'center'
+        imagen.style.boxShadow = '3px 3px 5px 5px darkgreen'
+        imagen.style.width = '50%'
+        imagen.style.marginLeft = '335px'
+        imagen.style.height = '400px'
+
+        document.body.style.backgroundColor = "white"
+        var encab = document.getElementById('hh')
+        encab.style.border = "1px solid black"
+        encab.style.backgroundColor = 'lightgreen'
+
+        // CODE
+        var foto = document.getElementById('foto')
+        var veces = document.getElementsByName('rad')
+        var res = document.getElementById('res')
+        var c = 1
+        var fotores = document.createElement('img')
+        fotores.setAttribute('id', 'fotores')
+        boton1.addEventListener('click', amor)
+
+        function amor(){
+            foto.setAttribute('src', 'https://i.pinimg.com/originals/4b/6f/0f/4b6f0f786d32460c3eb9b9f1c68dcf69.png')
+            if(veces[0].checked){
+                while(c <= 2){
+                    res.innerHTML += `Contamos ${c} caritas de amor<br><br>`
+                    fotores.setAttribute('src','https://images.emojiterra.com/google/android-pie/512px/1f44d.png')
+                    fotores.style.width = "50px"
+                    res.appendChild(fotores)
+                    c++
+                }
+            } else if(veces[1].checked){
+                while(c <= 6){
+                    res.innerHTML += `Contamos ${c} caritas de amor<br><br>`
+                    fotores.setAttribute('src','https://images.emojiterra.com/google/android-pie/512px/1f44d.png')
+                    fotores.style.width = "50px"
+                    res.appendChild(fotores)
+                    c++
+                }
+            } else if(veces[2].checked){
+                while (c <= 10){
+                    res.innerHTML += `Contamos ${c} caritas de amor<br><br>`
+                    fotores.setAttribute('src','https://images.emojiterra.com/google/android-pie/512px/1f44d.png')
+                    fotores.style.width = "50px"
+                    res.appendChild(fotores)
+                    c++
+                }
+            }
+        }
+        boton2.addEventListener('click', capo)
+        function capo(){
+            foto.setAttribute('src', 'https://imagensemoldes.com.br/wp-content/uploads/2018/06/Emoji-%C3%93culos-de-Sol-PNG-1200x1200.png')
+            if(veces[0].checked){
+                while(c <= 2){
+                    res.innerHTML += `El capo n. ${c} está despierto<br>`
+                    c++
+                }
+            } else if(veces[1].checked){
+                while(c <= 6){
+                    res.innerHTML += `El capo n. ${c} está despierto<br>`
+                    c++
+                }
+            } else if(veces[2].checked){
+                while(c <= 10){
+                    res.innerHTML += `El capo n. ${c} está despierto<br>`
+                    c++
+                }
+            }
+        }
+        boton3.addEventListener('click', beso)
+        function beso(){
+            foto.setAttribute('src', 'https://cdn.shopify.com/s/files/1/1061/1924/files/Kissing_Face_Emoji.png?8026536574188759287')
+            if(veces[0].checked){
+                while(c <= 2){
+                    res.innerHTML += `${c} .o beso<br>`
+                    c++
+                }
+            } else if(veces[1].checked){
+                while(c <= 6){
+                    res.innerHTML += `${c} .o beso<br>`
+                    c++
+                }
+            } else if(veces[2].checked){
+                while(c <= 10){
+                    res.innerHTML += `${c} .o beso<br>`
+                    c++
+                }
+            }
+        }
+
+        // CONDICIONAL Y REPETICIÓN
+
+
+
+    </script>
+</body>
+</html>
