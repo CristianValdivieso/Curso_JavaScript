@@ -35,12 +35,25 @@
         section{
          clear: left; /*OJO AQUÍ. Impide que otro elemento flote a la izquierda*/
         }
+        li{
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>EJERCICIO 01</h1>
         <h2>Float</h2>
+        <ul>
+            <li>Al utilizar <code>float</code> se retira al elemento del flujo normal del resto.</li>
+            <li>Elemento <code>clear</code> permite retomar el flujo
+                <ol>
+                    <li><code>Clear: right</code> impide que otro elemento flote a la derecha</li>
+                    <li><code>Clear: left</code> lo mismo pero a la izquierda</li>
+                    <li><code>Clear: both</code> impide en ambos lados</li>
+                </ol>
+            </li>
+        </ul>
     </header>
     <div>
         <p id="p1"></p>
